@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import ProductList from './components/ProductList';
 import axios from 'axios';
-const API_URL = import.meta.env.VITE_PRODUCTS_API_URL;
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -11,7 +10,7 @@ const App = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const { data } = await axios.get(API_URL);
+        const { data } = await axios.get('/api/products');
         setProducts(data);
       } catch (error) {
         const status = error.response ? error.response.status : null;
