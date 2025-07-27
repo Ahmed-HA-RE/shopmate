@@ -5,7 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 const Header = () => {
   const [dropDown, setDropDown] = useState(false);
 
-  const { cart } = useCart();
+  const { cart, removeFromCart, clearCart } = useCart();
   const itemCount = cart.reduce((acc, item) => acc + item.qty, 0);
   const total = cart
     .reduce((acc, item) => acc + item.price * item.qty, 0)
@@ -47,7 +47,10 @@ const Header = () => {
                       </p>
                     </div>
                     {/* remove-btn */}
-                    <button className='text-red-500 text-sm cursor-pointer'>
+                    <button
+                      onClick={() => removeFromCart(item.id)}
+                      className='text-red-500 text-sm cursor-pointer'
+                    >
                       Remove
                     </button>
                   </li>
@@ -59,7 +62,10 @@ const Header = () => {
                 <h2 className='font-bold'>Total:</h2>
                 <p className='font-bold'>${total}</p>
               </div>
-              <button className='cursor-pointer mt-4 w-full text-center bg-red-500 hover:bg-red-700 transition duration-200 text-white py-1.5 rounded'>
+              <button
+                onClick={clearCart}
+                className='cursor-pointer mt-4 w-full text-center bg-red-500 hover:bg-red-700 transition duration-200 text-white py-1.5 rounded'
+              >
                 Clear Cart
               </button>
             </div>
