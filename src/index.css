@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+.dropdown-menu {
+  animation: dropdown 0.4s linear;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
