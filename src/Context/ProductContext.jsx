@@ -11,7 +11,9 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const { data } = await axios.get('/api/products');
+        const { data } = await axios.get(
+          'https://shopmate-j60x.onrender.com/products'
+        );
         setProducts(data);
       } catch (error) {
         const status = error.response ? error.response.status : null;
