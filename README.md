@@ -1,12 +1,60 @@
-# React + Vite
+# 🛒 ShopMate - Catalog Shopping App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Live Demo :
 
-Currently, two official plugins are available:
+[https://shopmate.ahmedrehandev.net](https://shopmate.ahmedrehandev.net)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**ShopMate** is a fully functional catalog shopping application built using modern React development.The app demonstrates a real-world use case where users can browse a list of products, add them to a shopping cart, and see a dynamically updating total.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔧 Features & Functionality :
+
+- Product listing page with real-time data fetched from a JSON server
+- Shopping cart system with quantity management and automatic total calculation
+- Centralized state using React’s Context API for cleaner data flow
+- Loading state and user feedback via spinner components
+- Clean and responsive UI using Tailwind CSS
+- Component-based architecture for easy scalability and reusability
+
+---
+
+### 📸 Screenshot :
+
+![preview](./public/screen.png)
+
+---
+
+### 🧠 Concepts Added :
+
+- useState and useEffect hooks for handling state and side effects
+- Context API for managing global state
+- Component composition and props drilling minimization
+- Handling async operations with error management
+- Tailwind utility-first CSS for fast, responsive styling
+
+---
+
+### 🚀 Getting Started :
+
+Install Dependencies
+
+```
+npm install
+```
+
+Run project
+
+```
+npm run dev
+```
+
+---
+
+### 📜 License :
+
+This project is licensed under the MIT License.
+
+MIT License
+
+Copyright © 2025 Ahmed
